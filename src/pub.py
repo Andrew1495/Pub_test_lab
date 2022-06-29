@@ -46,7 +46,7 @@ class Pub:
         total = 0
         for drinks in self.menu: 
             total_drinks = drinks.price * drinks.quantity
-        for food in self.menu: 
+        for food in self.food_menu: 
             total_food = food.price * food.quantity
         total = total_drinks + total_food
         return total
