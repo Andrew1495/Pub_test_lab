@@ -5,6 +5,7 @@ class Pub:
         self.name = input_name
         self.till = input_till
         self.menu = []
+        self.food_menu = []
 
 
     def add_drink(self, drink):
@@ -29,6 +30,14 @@ class Pub:
             return False
         else: 
             return True 
+
+    def add_food(self, food):
+        self.food_menu.append(food)
+
+    def find_food(self, food):
+        for item in self.food_menu:
+            if item.name == food.name:
+                return item
 
         
 
