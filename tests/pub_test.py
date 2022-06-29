@@ -60,8 +60,8 @@ class TestPub(unittest.TestCase):
     def test_stock_value(self):
         self.pub.add_food(self.food)
         self.pub.add_drink(self.drink1)
-        self.pub.stock_value = total_stock_value(self)
-        self.assertEqual(510, self.pub.stock_value)
+        self.pub.stock_value = self.pub.total_stock_value()
+        self.assertEqual(510.00, self.pub.stock_value)
 
     
 

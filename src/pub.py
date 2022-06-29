@@ -41,11 +41,15 @@ class Pub:
                 return item
 
     def total_stock_value(self):
+        total_drinks = 0
+        total_food = 0
         total = 0
         for drinks in self.menu: 
-            total += drinks.price * drinks.quantity
+            total_drinks = drinks.price * drinks.quantity
         for food in self.menu: 
-            total += food.price * food.quantity
+            total_food = food.price * food.quantity
+        total = total_drinks + total_food
+        return total
         
         
 
