@@ -19,6 +19,14 @@ class TestFood(unittest.TestCase):
         self.assertEqual(10, self.food.rj_level)
         self.assertEqual(7, self.food1.rj_level)
 
+    def test_food_quantity(self):
+        self.assertEqual(20, self.food.quantity)
+        self.assertEqual(15, self.food1.quantity)
+
+    
+
+
+
 
 
     

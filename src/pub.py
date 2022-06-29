@@ -6,6 +6,7 @@ class Pub:
         self.till = input_till
         self.menu = []
         self.food_menu = []
+        self.stock_value = 0 
 
 
     def add_drink(self, drink):
@@ -38,6 +39,18 @@ class Pub:
         for item in self.food_menu:
             if item.name == food.name:
                 return item
+
+    def total_stock_value(self):
+        total = 0
+        for drinks in self.menu: 
+            total += drinks.price * drinks.quantity
+        for food in self.menu: 
+            total += food.price * food.quantity
+        
+        
+
+
+
 
         
 

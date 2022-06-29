@@ -56,6 +56,13 @@ class TestPub(unittest.TestCase):
         food = self.pub.find_food(self.food)
         self.assertEqual("kebab", food.name)
 
+
+    def test_stock_value(self):
+        self.pub.add_food(self.food)
+        self.pub.add_drink(self.drink1)
+        self.pub.stock_value = total_stock_value(self)
+        self.assertEqual(510, self.pub.stock_value)
+
     
 
 
